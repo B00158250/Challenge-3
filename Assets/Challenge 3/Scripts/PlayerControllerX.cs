@@ -39,7 +39,7 @@ public class PlayerControllerX : MonoBehaviour
     void Update()
     {
 
-        if (transform.position.y > 10)
+        if (transform.position.y > 11)
         {
             lowEnough = false;
         }
@@ -82,7 +82,8 @@ public class PlayerControllerX : MonoBehaviour
         else if (!gameOver && other.gameObject.CompareTag("Ground"))
         {
             playerRb.AddForce(Vector3.up * bottomImpulseIntensity, ForceMode.Impulse);
-            playerAudio.PlayOneShot(groundBounceSound, 2);
+            playerAudio.PlayOneShot(groundBounceSound, 2);
+
         }
 
     }
